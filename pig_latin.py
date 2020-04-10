@@ -19,11 +19,13 @@ def pig_latin_game():
             elif word[0] in ("q", "w", 'r', 't', 'y', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'):
                 new_word = word[1:]+word[0]+"ay"
                 new_words.append(new_word)
+            else:
+                print("This doesn't actually look like a word to me. Try again. ")
+                
         if entries == "EXIT":
                 break
 
-        else:
-            print("This doesn't actually look like a word to me. Try again. ")
+
 
 
 
