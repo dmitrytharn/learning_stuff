@@ -7,22 +7,32 @@ def pig_latin_game():
     print("Say 'EXIT' to quit. \n")
     while True:
     #Determine user input
+        words = []
+        entries = input("Say the word! ")
+        words = entries.split()
+        new_words = []
+        for word in words:
+            if word[0] in ("a", "e", "o", 'u', 'i',):
+                new_word = word + "way"
+                new_words.append(new_word)
+                #most probably you want to use REGEX here :)
+            elif word[0] in ("q", "w", 'r', 't', 'y', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'):
+                new_word = word[1:]+word[0]+"ay"
+                new_words.append(new_word)
+        if entries == "EXIT":
+                break
 
-        the_word = input("Say the word! ")
-        if the_word[0] in ("a", "e", "o", 'u', 'i',):
-            new_word = the_word + "way"
-            print("\n" +new_word+ "\n")
-            #most probably you want to use REGEX here :)
-        elif the_word[0] in ("q", "w", 'r', 't', 'y', 'p', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm'):
-            new_word = the_word[1:]+the_word[0]+"ay"
-            print("\n" +new_word+ "\n")
-        elif the_word == "EXIT":
-            print("goodbye!")
-            break
         else:
             print("This doesn't actually look like a word to me. Try again. ")
+
+
+
+        print("\n")
+        print(" ".join(new_words))
+        print("\n")
 
 pig_latin_game()
 print("See you later")
 
-'''this can be improved by accepting cap letters as well, also - multiple words/sentences and REGEX'''
+'''this can be improved by accepting cap letters as well, also REGEX. + this is not getting inputs in format like
+"Hello! This is me, Mario!"'''
