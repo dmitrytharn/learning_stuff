@@ -68,6 +68,11 @@ def main():
         else:
             print("The input should be 'y' or 'n' ")
 
+
+
+print("Welcome to Roleplaying Character Generator v.0.1 \n")
+print("*******************************************************************************")
+print("With the help of this script you can easily create a character in few steps\n")
 main()
 
 #you have 3 re-rolls left.
