@@ -11,17 +11,25 @@ print("Welcome to magnificent Fantasy Name generator! \n")
 print("Here you can create a name for your character with a simple press of a button! \n")
 
 #chreate a main loop where the player will decide if he wants to generate or quit the program
+def get_name():
+    while True:
+        name = "Unnamed character"
+        chosen_first = random.choice(first_name)
+        chosen_last = random.choice(last_name)
+        answer = input("Do you want to generate a name for your character now? y/n ")
+        if answer == "y":
+            print("\n")
+            print(f"Random character name: {chosen_first} {chosen_last}")
+            print("\n")
+            name = chosen_first + " " + chosen_last
+        if answer == "n":
+            print("Ok. See you again!")
+            break
+        elif answer not in ["y", 'n']:
+            print("Just 'y' or 'n' please")
+    return name
 
-while True:
-    chosen_first = random.choice(first_name)
-    chosen_last = random.choice(last_name)
-    answer = input("Do you want to generate a name for your character now? y/n ")
-    if answer == "y":
-        print("\n")
-        print(f"Random character name: {chosen_first} {chosen_last}")
-        print("\n")
-    if answer == "n":
-        print("Ok. See you again!")
-        break
-    else:
-        print("Just 'y' or 'n' please")
+
+
+if __name__ == "__main__":
+    get_name()

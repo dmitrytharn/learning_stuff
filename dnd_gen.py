@@ -1,4 +1,5 @@
 from random import randint
+from name_gen import get_name
 # set the main parameters
 my_char = {
 "Str" : 0,
@@ -25,7 +26,7 @@ def re_roll():
 
         if re_roll in ['y', "Y"]:
             param = input("\nWhich param do you want to re-roll? (Str/Dex/Con/Wis/Int/Cha) \n").capitalize()
-            print(param)
+            # print(param)
             for key,value in my_char.items():
                 if key != param:
                     # print("Checking parameters. Fail")
@@ -57,6 +58,9 @@ def main():
             generating()
             print_out()
             re_roll()
+            print(my_char)
+            name = get_name()
+            print(name)
             print(my_char)
         elif answer == 'n':
             print("See you later, stranger")
