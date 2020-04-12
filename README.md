@@ -4,3 +4,6 @@ UPD: Right now I'm working on small project that allows you to generate fantasy 
 Done so far: - Parameters generation (3d6) 
              - Re-roll of chosen stat (Str/Dex/Con/Wis/Int/Cha) - player is able to re-roll any of the stats.
              - Attached Fantasy name generator which allows to generate First Name + Last Name from two lists of names.
+
+
+UPD: Most of other code samples come from doing excercises from "Impractical Python Projects" by Lee Vaughan / No Starch Press.
