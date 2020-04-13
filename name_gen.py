@@ -12,13 +12,13 @@ last_name = ("Dragonborne", "Stormbreaker", "Mountaintop", "Grimmerwald", "Axech
 #chreate a main loop where the player will decide if he wants to generate or quit the program
 def get_name():
 
-    print("Welcome to magnificent Fantasy Name generator! \n")
+    print("\nWelcome to magnificent Fantasy Name generator! \n")
     print("Here you can create a name for your character with a simple press of a button! \n")
     while True:
 
         chosen_first = random.choice(first_name)
         chosen_last = random.choice(last_name)
-        answer = input("Do you want to generate a name for your character now? y/n ")
+        answer = input("\nDo you want to generate a name for your character now? y/n ")
 
         if answer == "y":
             print("\n")
@@ -37,7 +37,7 @@ def get_name():
                         break
             elif want_to_name.lower() == "n":
                 name = "Unnamed character"
-                print("Ok. See you again!")
+                print("Ok. See you again! \n")
                 break
             else:
                 print("\nJust 'y' or 'n', please.\n")
