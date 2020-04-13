@@ -1,17 +1,3 @@
-''' 1. Load Dictionary with new_words
-    2. Create a list to hold palingrams
-    3. for word in word_list
-        4. get length of the words
-        5. if len > 1:
-        6 loop through letters in the words
-        7. if reversed word fragment at front of the word is in word_list and letters after form a palindromic sequence:
-            8. append the word and reversed word into pali_list
-        9. if reversed word fragment at the end of the word  is in word list and letters before form a palindromic sequence:
-        10. Append the word and reversed word to palingram pali_list
-    11. Sort palingram list alphabetically
-    12. print word-pair palingrams from the pali_list
-    '''
-
 import sys
 import time
 start_time = time.time()

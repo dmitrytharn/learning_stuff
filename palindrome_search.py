@@ -23,5 +23,5 @@ def check_for_palindromes(value):
     print(*pali_list, sep="\n")
     return pali_list
 
-
-check_for_palindromes(load("sample_text_file.txt"))
+if __name__ == "__main__":
+    check_for_palindromes(load("sample_text_file.txt"))
